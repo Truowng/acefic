@@ -63,6 +63,23 @@ a {
   }
 }
 
+.slider-control {
+  @include flex(unset, center, 5px);
+  .slider-button {
+    width: 40px;
+    aspect-ratio: 1;
+    background-color: #1c417e;
+    color: $white;
+    outline: none;
+    border: none;
+    transition: all ease 0.3s;
+    &:hover {
+      background-color: $white;
+      color: #1c417e;
+    }
+  }
+}
+
 .heading-block {
   margin-bottom: 30px;
 

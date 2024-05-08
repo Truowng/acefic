@@ -67,6 +67,26 @@ a {
   font-weight: 200;
 }
 
+.slider-control {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: 5px;
+}
+.slider-control .slider-button {
+  width: 40px;
+  aspect-ratio: 1;
+  background-color: #1c417e;
+  color: #fff;
+  outline: none;
+  border: none;
+  transition: all ease 0.3s;
+}
+.slider-control .slider-button:hover {
+  background-color: #fff;
+  color: #1c417e;
+}
+
 .heading-block {
   margin-bottom: 30px;
   width: -moz-fit-content;
@@ -447,4 +467,84 @@ a {
 }
 .blog .blog-item:hover .image img {
   transform: scale(1.1);
+}
+
+.advantage {
+  padding-top: 120px;
+  background: linear-gradient(90deg, rgba(232, 242, 255, 0.6) 80%, rgba(232, 242, 255, 0.6) 80%), url(../images/blog-bg.png) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+.advantage .heading-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: unset;
+  width: 100%;
+}
+.advantage .heading-block .title {
+  color: #1c417e;
+}
+.advantage .advantage-slider {
+  width: 100%;
+  margin: 0 auto;
+}
+.advantage .swiper {
+  overflow: visible;
+}
+.advantage .advantage-item {
+  position: relative;
+  height: 65vh;
+}
+.advantage .advantage-item .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.advantage .advantage-item .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+.advantage .advantage-item .image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.advantage .advantage-item .content-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: unset;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.advantage .advantage-item .content-wrapper .num {
+  font-size: 400px;
+  color: #fff;
+}
+.advantage .advantage-item .content-wrapper .content {
+  width: 40%;
+}
+.advantage .advantage-item .content-wrapper .content .title {
+  margin-bottom: 20px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-left: 20px;
+  border-left: 3px solid #fff;
+}
+.advantage .advantage-item .content-wrapper .content .desc {
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 300;
 }

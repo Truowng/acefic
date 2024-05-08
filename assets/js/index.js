@@ -35,4 +35,17 @@ const homeBlog = new Swiper(".blog .swiper", {
   },
 });
 
+const homeAdvantage = new Swiper(".advantage .advantage-slider .swiper", {
+  direction: "horizontal",
+  speed: 1000,
+  autoplay: {
+    delay: 5000,
+  },
+  effect: "coverflow",
+  navigation: {
+    nextEl: ".advantage .slider-control .slider-button-next",
+    prevEl: ".advantage .slider-control .slider-button-prev",
+  },
+});
+
 const homeFullPage = new fullpage("#homeFullPage", {});
