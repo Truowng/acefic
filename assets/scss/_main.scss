@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-montserrat;
+  font-size: 14px;
+  color: $white;
+  line-height: 1.5;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+.btn {
+  padding: 10px 20px;
+  color: $white;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.view-more-btn {
+  display: block;
+  width: fit-content;
+  color: $white;
+  font-size: 14px;
+  font-weight: $fw-l;
+  text-transform: uppercase;
+  @include flex(unset, center, 10px);
+
+  .icon {
+    font-size: 18px;
+    font-weight: $fw-el;
+  }
+}
+
+.heading-block {
+  margin-bottom: 30px;
+
+  width: fit-content;
+  .title {
+    font-size: 35px;
+    font-weight: $fw-eb;
+    text-transform: uppercase;
+  }
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  z-index: 10;
+
+  .header-wrapper {
+    @include flex(space-between, center, unset);
+    height: 70px;
+  }
+
+  .header-right {
+    @include flex(unset, center, 20px);
+  }
+
+  .languages-wrapper {
+    @include flex(unset, center, 10px);
+    .language {
+      font-weight: $fw-l;
+    }
+  }
+
+  .logo {
+    display: block;
+    width: 200px;
+  }
+
+  .menu-btn {
+    font-weight: $fw-l;
+  }
+
+  .nav-wrapper {
+    background-color: rgba($color: $black, $alpha: 0.4);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    padding-left: 50px;
+    transform: translateX(100%);
+    transition: all cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+    &.active {
+      transform: translateX(0);
+    }
+  }
+
+  .nav-list {
+    margin-top: 150px;
+    list-style: disc;
+    .nav-item {
+      margin-bottom: 40px;
+      transition: all ease 0.2s;
+      &:hover {
+        transform: translateX(10px);
+      }
+      a {
+        font-size: 20px;
+        font-weight: $fw-el;
+        display: block;
+      }
+    }
+  }
+}
