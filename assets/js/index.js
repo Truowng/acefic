@@ -25,6 +25,9 @@ const homeBlog = new Swiper(".blog .swiper", {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 50,
+  autoplay: {
+    delay: 2000,
+  },
   breakpoints: {
     767: {
       slidesPerView: 2,
@@ -48,4 +51,6 @@ const homeAdvantage = new Swiper(".advantage .advantage-slider .swiper", {
   },
 });
 
-const homeFullPage = new fullpage("#homeFullPage", {});
+const fullPage = new fullpage("#fullpage", {
+  responsiveWidth: 767,
+});
