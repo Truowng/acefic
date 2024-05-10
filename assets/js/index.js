@@ -1,11 +1,16 @@
 const menuBtn = document.querySelector("#header .menu-btn");
 const menu = document.querySelector("#header .nav-wrapper");
+const closeBtn = document.querySelector("#header .nav-wrapper .close-btn");
 
 menuBtn.addEventListener("mouseover", () => {
   menu.classList.add("active");
 });
 
 menu.addEventListener("mouseleave", () => {
+  menu.classList.remove("active");
+});
+
+closeBtn.addEventListener("click", () => {
   menu.classList.remove("active");
 });
 

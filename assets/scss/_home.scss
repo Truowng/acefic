@@ -95,6 +95,16 @@
       font-size: 16px;
       font-weight: $fw-l;
       margin-bottom: 10px;
+      a {
+        margin-left: 10px;
+        width: 50px;
+        display: inline-block;
+        transition: all ease 0.5s;
+
+        &:hover {
+          transform: translateX(10px);
+        }
+      }
     }
   }
 
@@ -492,20 +502,19 @@
 
   #home-banner {
     height: auto;
-    margin-bottom: 30px;
     .swiper-wrapper {
       height: unset;
     }
     .banner-wrapper {
-      margin-top: 30px;
+      padding: 80px 20px;
       position: initial;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      background: url(../images/banner-wrapper.jpg) no-repeat center;
+      background-size: cover;
+
       a {
         max-width: unset;
-      }
-      .banner-item {
-        background-color: $blue;
       }
     }
   }

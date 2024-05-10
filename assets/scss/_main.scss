@@ -48,6 +48,19 @@ a {
   font-size: 14px;
 }
 
+.close-btn {
+  padding: 0;
+  display: block;
+  width: 25px;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 2;
+  img {
+    width: 100%;
+  }
+}
+
 .view-more-btn {
   display: block;
   width: fit-content;

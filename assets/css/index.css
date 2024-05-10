@@ -49,6 +49,19 @@ a {
   font-size: 14px;
 }
 
+.close-btn {
+  padding: 0;
+  display: block;
+  width: 25px;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 2;
+}
+.close-btn img {
+  width: 100%;
+}
+
 .view-more-btn {
   display: block;
   width: -moz-fit-content;
@@ -391,6 +404,15 @@ a {
   font-size: 16px;
   font-weight: 300;
   margin-bottom: 10px;
+}
+.about .about-content .desc a {
+  margin-left: 10px;
+  width: 50px;
+  display: inline-block;
+  transition: all ease 0.5s;
+}
+.about .about-content .desc a:hover {
+  transform: translateX(10px);
 }
 .about .about-profile {
   position: absolute;
@@ -763,22 +785,20 @@ a {
   }
   #home-banner {
     height: auto;
-    margin-bottom: 30px;
   }
   #home-banner .swiper-wrapper {
     height: unset;
   }
   #home-banner .banner-wrapper {
-    margin-top: 30px;
+    padding: 80px 20px;
     position: initial;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    background: url(../images/banner-wrapper.jpg) no-repeat center;
+    background-size: cover;
   }
   #home-banner .banner-wrapper a {
     max-width: unset;
-  }
-  #home-banner .banner-wrapper .banner-item {
-    background-color: #1c417e;
   }
   .about {
     height: auto;
