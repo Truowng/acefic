@@ -107,7 +107,7 @@ a {
 }
 .heading-block .title {
   font-size: 35px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -767,7 +767,7 @@ a {
   flex-direction: column;
 }
 .archive .archive-list .archive-item .num {
-  font-weight: 800;
+  font-weight: 700;
   color: #1c417e;
   font-size: 50px;
 }
