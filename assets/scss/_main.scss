@@ -5,7 +5,8 @@
 }
 
 body {
-  font-family: $font-montserrat;
+  font-family: Arial, Helvetica, sans-serif;
+  // font-family: $font-montserrat;
   font-size: 14px;
   color: $white;
   line-height: 1.5;
@@ -123,7 +124,7 @@ a {
   }
 
   .header-right {
-    @include flex(unset, center, 20px);
+    @include flex(unset, center, 25px);
   }
 
   .languages-wrapper {
@@ -135,11 +136,12 @@ a {
 
   .logo {
     display: block;
-    width: 200px;
+    width: 100px;
   }
 
   .menu-btn {
     font-weight: $fw-l;
+    padding: 0;
   }
 
   .nav-wrapper {
@@ -304,7 +306,7 @@ a {
       rgba(0, 0, 0, 0) 100%
     );
     .logo {
-      width: 120px;
+      width: 80px;
     }
     .nav-wrapper {
       width: 250px;
