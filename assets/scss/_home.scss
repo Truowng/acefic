@@ -17,12 +17,15 @@
 
   .banner-wrapper {
     bottom: 50px;
-    @include flex(space-evenly, center, 20px);
+
     position: absolute;
     left: 0;
     right: 0;
     bottom: 40px;
     z-index: 2;
+    .container {
+      @include flex(space-evenly, center, 20px);
+    }
     a {
       display: block;
       flex: 1;
@@ -508,11 +511,19 @@
     .banner-wrapper {
       padding: 80px 20px;
       position: initial;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
       background: url(../images/banner-wrapper.jpg) no-repeat center;
       background-size: cover;
-
+      .banner-item {
+        padding: 40px 10px 20px;
+        .title {
+          font-size: 16px;
+        }
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
       a {
         max-width: unset;
       }

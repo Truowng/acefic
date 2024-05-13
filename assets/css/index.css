@@ -324,15 +324,17 @@ a {
 }
 #home-banner .banner-wrapper {
   bottom: 50px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 20px;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 40px;
   z-index: 2;
+}
+#home-banner .banner-wrapper .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
 }
 #home-banner .banner-wrapper a {
   display: block;
@@ -792,10 +794,18 @@ a {
   #home-banner .banner-wrapper {
     padding: 80px 20px;
     position: initial;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     background: url(../images/banner-wrapper.jpg) no-repeat center;
     background-size: cover;
+  }
+  #home-banner .banner-wrapper .banner-item {
+    padding: 40px 10px 20px;
+  }
+  #home-banner .banner-wrapper .banner-item .title {
+    font-size: 16px;
+  }
+  #home-banner .banner-wrapper .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   #home-banner .banner-wrapper a {
     max-width: unset;

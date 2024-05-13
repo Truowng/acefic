@@ -1,3 +1,6 @@
+import { CountUp } from "../js/countUp.min.js";
+
+const counters = document.querySelectorAll(".archive-list .archive-item .num");
 const menuBtn = document.querySelector("#header .menu-btn");
 const menu = document.querySelector("#header .nav-wrapper");
 const closeBtn = document.querySelector("#header .nav-wrapper .close-btn");
@@ -58,4 +61,22 @@ const homeAdvantage = new Swiper(".advantage .advantage-slider .swiper", {
 
 const fullPage = new fullpage("#fullpage", {
   responsiveWidth: 767,
+});
+
+counters.forEach((counter, index) => {
+  const countUp = new CountUp(`num-${index + 1}`, counter.innerHTML, {
+    enableScrollSpy: true,
+    duration: 3.0,
+    useGrouping: false,
+    scrollSpyOnce: true,
+  });
+  countUp.handleScroll();
+  let fpView;
+  let interval = setInterval(() => {
+    fpView = document.querySelector(".fp-viewing-2");
+    if (fpView) {
+      clearInterval(interval);
+      countUp.start();
+    }
+  }, 50);
 });
