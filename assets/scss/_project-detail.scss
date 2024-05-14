@@ -1,0 +1,125 @@
+.project-detail-banner {
+  height: 100vh;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 72%
+    );
+
+    z-index: 1;
+  }
+  .project-detail-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .swiper-slide,
+  .swiper-wrapper,
+  .swiper {
+    height: 100%;
+  }
+  .project-detail-image {
+    height: 100%;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .project-detail-content {
+    position: relative;
+    z-index: 2;
+    @include flex(unset, center, unset);
+    height: 100%;
+    .project-detail-wrapper {
+      max-width: 35%;
+      padding-right: 40px;
+      border-right: 1px solid rgba($color: $white, $alpha: 0.15);
+    }
+    .heading-block {
+      .title {
+        font-size: 20px;
+        line-height: 1.5;
+      }
+    }
+
+    .info-item {
+      @include flex(unset, start, 30px);
+      padding-top: 25px;
+      margin-top: 25px;
+      border-top: 1px solid rgb(255, 255, 255, 15%);
+      .icon {
+        width: 40px;
+        min-width: 40px;
+      }
+      .title {
+        font-size: 18px;
+        font-weight: $fw-sb;
+        margin-bottom: 5px;
+      }
+      .desc {
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: initial;
+    right: 10px;
+    @include flex(unset, unset, 15px);
+    flex-direction: column;
+    bottom: initial;
+    width: fit-content;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: $white;
+    transition: all ease 0.5s;
+  }
+}
+
+// RESPONSIVE
+@include tablet {
+  .project-detail-banner {
+    .project-detail-content {
+      .project-detail-wrapper {
+        max-width: 60%;
+      }
+    }
+  }
+}
+@include landscape-phone {
+  .project-detail-banner {
+    &::before {
+      background: rgba($color: #000000, $alpha: 0.5);
+    }
+
+    .project-detail-content {
+      .heading-block {
+        width: 100%;
+        .title {
+          text-align: center;
+        }
+      }
+      .project-detail-wrapper {
+        max-width: 100%;
+        padding-right: 0;
+        border: none;
+      }
+      .swiper-pagination {
+        display: none;
+      }
+    }
+  }
+}

@@ -59,6 +59,22 @@ const homeAdvantage = new Swiper(".advantage .advantage-slider .swiper", {
   },
 });
 
+const projectDetail = new Swiper(".project-detail-slider .swiper", {
+  direction: "horizontal",
+  speed: 1000,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  effect: "fade",
+
+  pagination: {
+    direction: "vertical",
+    el: ".project-detail-content .swiper-pagination",
+    clickable: true,
+  },
+});
+
 const fullPage = new fullpage("#fullpage", {
   responsiveWidth: 767,
 });
