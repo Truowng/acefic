@@ -94,6 +94,36 @@ a {
   }
 }
 
+.pagination {
+  @include flex(center, center, 5px);
+  .pagination-btn {
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    color: #979797;
+    transition: all ease 0.3s;
+    background-color: transparent;
+    &:hover {
+      background-color: #f7f8fa;
+    }
+  }
+  .num {
+    padding: 10px 15px;
+    transition: all ease 0.3s;
+    color: #979797;
+    &:hover {
+      background-color: #f7f8fa;
+    }
+    &.active {
+      background-color: $black;
+      color: $white;
+    }
+  }
+  .etc {
+    color: #979797;
+  }
+}
+
 .heading-block {
   margin-bottom: 30px;
 
@@ -102,6 +132,12 @@ a {
     font-size: 35px;
     font-weight: $fw-b;
     text-transform: uppercase;
+  }
+  &.center {
+    width: 100%;
+    .title {
+      text-align: center;
+    }
   }
 }
 
@@ -178,9 +214,45 @@ a {
   }
 }
 
+.banner {
+  .banner-image {
+    height: 400px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.breadcrumb {
+  background-color: #f7f8fa;
+  padding: 15px 0;
+  .breadcrumb-wrapper {
+    @include flex(unset, center, 15px);
+  }
+  .breadcrumb-link,
+  .sep {
+    color: #979797;
+  }
+
+  .breadcrumb-link {
+    &:hover {
+      text-decoration: underline;
+    }
+    &.current {
+      color: $black;
+    }
+  }
+}
+
 #footer {
   position: relative;
   height: 100vh;
+  &.no-fp {
+    @include flex(unset, center, unset);
+    flex-direction: row;
+  }
   .background-image {
     position: absolute;
     top: 0;
@@ -282,6 +354,7 @@ a {
   }
   #footer {
     padding: 80px 0 20px;
+
     .footer-wrapper {
       width: 100%;
     }
@@ -310,6 +383,17 @@ a {
     }
     .nav-wrapper {
       width: 250px;
+    }
+  }
+  .banner {
+    .banner-image {
+      height: 300px;
+    }
+  }
+
+  #footer {
+    &.no-fp {
+      height: unset;
     }
   }
 }
