@@ -18,6 +18,18 @@
     .gallery-detail-image {
       display: block;
       width: 100%;
+      transition: all ease 0.3s;
+      overflow: hidden;
+      img {
+        transition: all ease 0.3s;
+      }
+      &:hover {
+        transform: scale(0.85);
+
+        img {
+          transform: scale(1.22);
+        }
+      }
     }
   }
 }

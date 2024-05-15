@@ -1418,6 +1418,17 @@ a {
 .gallery-detail .gallery-msry .gallery-detail-image {
   display: block;
   width: 100%;
+  transition: all ease 0.3s;
+  overflow: hidden;
+}
+.gallery-detail .gallery-msry .gallery-detail-image img {
+  transition: all ease 0.3s;
+}
+.gallery-detail .gallery-msry .gallery-detail-image:hover {
+  transform: scale(0.85);
+}
+.gallery-detail .gallery-msry .gallery-detail-image:hover img {
+  transform: scale(1.22);
 }
 
 @media only screen and (max-width: 576px) {
