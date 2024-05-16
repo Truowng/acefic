@@ -1,0 +1,113 @@
+.recruitment-list {
+  margin: 80px 0 50px;
+  .heading-block {
+    .title {
+      color: $black;
+    }
+  }
+  .recruitment-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  .recruitment-item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    transition: all ease 0.3s;
+    .title {
+      @include flex(space-between, start, 20px);
+      margin-bottom: 10px;
+      .text {
+        color: $black;
+        font-weight: $fw-sb;
+        font-size: 20px;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        -ms-text-overflow: ellipsis;
+        height: 30px;
+        overflow: hidden;
+      }
+      .icon {
+        min-width: 25px;
+        width: 25px;
+        img {
+          transition: all ease 0.3s;
+        }
+      }
+    }
+    .required {
+      list-style-type: disc;
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 10px;
+      .required-item {
+        color: #979797;
+        font-size: 16px;
+        span {
+          font-weight: $fw-sb;
+          color: $black;
+        }
+        .color {
+          color: #e4bf00;
+        }
+      }
+    }
+
+    &:hover {
+      border-color: $black;
+      transform: scale(1.02);
+      .title {
+        .icon {
+          img {
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVE
+
+@include desktop {
+  .recruitment-list {
+    .recruitment-item {
+      .required {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+@include landscape-phone {
+  .recruitment-list {
+    margin: 50px 0;
+    .recruitment-group {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .recruitment-item {
+      .required {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@include mobile {
+  .recruitment-list {
+    .recruitment-item {
+      .required {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

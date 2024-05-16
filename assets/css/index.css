@@ -1830,3 +1830,97 @@ a {
     margin: 50px 0;
   }
 }
+.recruitment-list {
+  margin: 80px 0 50px;
+}
+.recruitment-list .heading-block .title {
+  color: #000;
+}
+.recruitment-list .recruitment-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  margin-bottom: 50px;
+}
+.recruitment-list .recruitment-item {
+  padding: 20px;
+  border: 1px solid #ddd;
+  transition: all ease 0.3s;
+}
+.recruitment-list .recruitment-item .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.recruitment-list .recruitment-item .title .text {
+  color: #000;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  height: 30px;
+  overflow: hidden;
+}
+.recruitment-list .recruitment-item .title .icon {
+  min-width: 25px;
+  width: 25px;
+}
+.recruitment-list .recruitment-item .title .icon img {
+  transition: all ease 0.3s;
+}
+.recruitment-list .recruitment-item .required {
+  list-style-type: disc;
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+}
+.recruitment-list .recruitment-item .required .required-item {
+  color: #979797;
+  font-size: 16px;
+}
+.recruitment-list .recruitment-item .required .required-item span {
+  font-weight: 600;
+  color: #000;
+}
+.recruitment-list .recruitment-item .required .required-item .color {
+  color: #e4bf00;
+}
+.recruitment-list .recruitment-item:hover {
+  border-color: #000;
+  transform: scale(1.02);
+}
+.recruitment-list .recruitment-item:hover .title .icon img {
+  transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 1199px) {
+  .recruitment-list .recruitment-item .required {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .recruitment-list {
+    margin: 50px 0;
+  }
+  .recruitment-list .recruitment-group {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .recruitment-list .recruitment-item .required {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .recruitment-list .recruitment-item .required {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
