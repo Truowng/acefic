@@ -1,0 +1,87 @@
+.blog-detail {
+  margin: 80px 0;
+  .heading-block {
+    .title {
+      color: $black;
+      line-height: 1.5;
+    }
+    .blog-detail-info {
+      padding: 15px 0;
+      margin-top: 15px;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      @include flex(unset, center, 20px);
+      .date {
+        color: #979797;
+      }
+      .dot {
+        color: #979797;
+      }
+      .share {
+        @include flex(unset, center, 15px);
+        .share-item {
+          width: 20px;
+        }
+      }
+    }
+  }
+  .blog-detail-content {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #eee;
+    * {
+      color: $black;
+      line-height: 1.5;
+    }
+    a {
+      color: $blue;
+      text-decoration: underline;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    h5 {
+      font-size: 22px;
+      font-weight: $fw-sb;
+      margin-bottom: 15px;
+    }
+    h6 {
+      font-weight: $fw-sb;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    h4 {
+      font-size: 18px;
+      font-weight: $fw-sb;
+      margin-bottom: 10px;
+    }
+    img {
+      width: 100%;
+      margin: 20px 0;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin: 20px 0;
+      li {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .blog-relate {
+    .heading-block {
+      .title {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+// RESPONSIVE
+@include extra-mobile {
+  .blog-detail {
+    margin: 50px 0;
+  }
+}

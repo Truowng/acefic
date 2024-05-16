@@ -230,6 +230,7 @@ a {
   padding: 15px 0;
   .breadcrumb-wrapper {
     @include flex(unset, center, 15px);
+    overflow-x: auto;
   }
   .breadcrumb-link,
   .sep {
@@ -237,6 +238,7 @@ a {
   }
 
   .breadcrumb-link {
+    white-space: nowrap;
     &:hover {
       text-decoration: underline;
     }

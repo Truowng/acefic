@@ -83,6 +83,27 @@ if (document.querySelector(".project-detail-slider .swiper")) {
   });
 }
 
+if (document.querySelector(".blog-relate .swiper")) {
+  const blogRelate = new Swiper(".blog-relate .swiper", {
+    direction: "horizontal",
+    speed: 1000,
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+    },
+  });
+}
+
 if (document.querySelector("#fullpage")) {
   const fullPage = new fullpage("#fullpage", {
     responsiveWidth: 767,
