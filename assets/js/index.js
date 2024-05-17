@@ -29,8 +29,8 @@ if (document.querySelector("#home-banner .swiper")) {
   });
 }
 
-if (document.querySelector(".blog .swiper")) {
-  const homeBlog = new Swiper(".blog .swiper", {
+if (document.querySelector(".home-blog .home-blog-slider .swiper")) {
+  const homeBlog = new Swiper(".home-blog .home-blog-slider .swiper", {
     direction: "horizontal",
     speed: 1000,
     loop: true,
