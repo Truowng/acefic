@@ -5,23 +5,23 @@
       color: $black;
       line-height: 1.5;
     }
-    .blog-detail-info {
-      padding: 15px 0;
-      margin-top: 15px;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-      @include flex(unset, center, 20px);
-      .date {
-        color: #979797;
-      }
-      .dot {
-        color: #979797;
-      }
-      .share {
-        @include flex(unset, center, 15px);
-        .share-item {
-          width: 20px;
-        }
+  }
+  .blog-detail-info {
+    padding: 15px 0;
+    margin-bottom: 30px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    @include flex(unset, center, 20px);
+    .date {
+      color: #979797;
+    }
+    .dot {
+      color: #979797;
+    }
+    .share {
+      @include flex(unset, center, 15px);
+      .share-item {
+        width: 20px;
       }
     }
   }

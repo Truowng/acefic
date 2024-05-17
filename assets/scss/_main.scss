@@ -248,6 +248,101 @@ a {
   }
 }
 
+.contact {
+  padding: 80px 0;
+  background-color: #f4f8ff;
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+  }
+  .submit-btn {
+    background-color: $blue;
+    border-radius: 0;
+    width: 100%;
+    font-size: 16px;
+    &:hover {
+      background-color: #255ab1;
+    }
+  }
+}
+
+.form {
+  padding: 0 30px;
+  .heading-block {
+    .title {
+      color: $black;
+    }
+  }
+
+  .input-container {
+    margin-bottom: 50px;
+  }
+
+  .input {
+    margin-bottom: 25px;
+    label {
+      color: $black;
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: $fw-sb;
+
+      .required {
+        color: red;
+      }
+    }
+    input {
+      width: 100%;
+      padding: 10px 15px;
+      outline: none;
+      border: 1px solid #ddd;
+      transition: all ease 0.3s;
+      &:focus {
+        border-color: $black;
+      }
+    }
+    select {
+      width: 100%;
+      padding: 10px 15px;
+      outline: none;
+      border: 1px solid #ddd;
+      transition: all ease 0.3s;
+      &:focus {
+        border-color: $black;
+      }
+    }
+
+    .upload {
+      input {
+        color: $black;
+        border-style: dashed;
+        &::file-selector-button {
+          background-color: $blue;
+          color: $white;
+          padding: 10px 15px;
+          outline: none;
+          border: none;
+          transition: all ease 0.3s;
+          &:hover {
+            background-color: #255ab1;
+          }
+        }
+      }
+      .note {
+        margin-top: 10px;
+        color: #979797;
+        display: block;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.map {
+  border: 2px solid $blue;
+}
+
 #footer {
   position: relative;
   height: 100vh;
@@ -348,6 +443,22 @@ a {
 }
 
 // RESPONSIVE
+@include tablet {
+  .contact {
+    padding: 50px 0;
+    .contact-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 60px;
+    }
+  }
+  .form {
+    padding: 0;
+  }
+  .map {
+    height: 500px;
+  }
+}
+
 @include landscape-phone {
   .heading-block {
     .title {

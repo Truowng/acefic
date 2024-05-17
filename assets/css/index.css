@@ -256,6 +256,93 @@ a {
   color: #000;
 }
 
+.contact {
+  padding: 80px 0;
+  background-color: #f4f8ff;
+}
+.contact .contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 30px;
+}
+.contact .submit-btn {
+  background-color: #1c417e;
+  border-radius: 0;
+  width: 100%;
+  font-size: 16px;
+}
+.contact .submit-btn:hover {
+  background-color: #255ab1;
+}
+
+.form {
+  padding: 0 30px;
+}
+.form .heading-block .title {
+  color: #000;
+}
+.form .input-container {
+  margin-bottom: 50px;
+}
+.form .input {
+  margin-bottom: 25px;
+}
+.form .input label {
+  color: #000;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.form .input label .required {
+  color: red;
+}
+.form .input input {
+  width: 100%;
+  padding: 10px 15px;
+  outline: none;
+  border: 1px solid #ddd;
+  transition: all ease 0.3s;
+}
+.form .input input:focus {
+  border-color: #000;
+}
+.form .input select {
+  width: 100%;
+  padding: 10px 15px;
+  outline: none;
+  border: 1px solid #ddd;
+  transition: all ease 0.3s;
+}
+.form .input select:focus {
+  border-color: #000;
+}
+.form .input .upload input {
+  color: #000;
+  border-style: dashed;
+}
+.form .input .upload input::file-selector-button {
+  background-color: #1c417e;
+  color: #fff;
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  transition: all ease 0.3s;
+}
+.form .input .upload input::file-selector-button:hover {
+  background-color: #255ab1;
+}
+.form .input .upload .note {
+  margin-top: 10px;
+  color: #979797;
+  display: block;
+  font-size: 12px;
+}
+
+.map {
+  border: 2px solid #1c417e;
+}
+
 #footer {
   position: relative;
   height: 100vh;
@@ -361,6 +448,21 @@ a {
   width: fit-content;
 }
 
+@media only screen and (max-width: 991px) {
+  .contact {
+    padding: 50px 0;
+  }
+  .contact .contact-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 60px;
+  }
+  .form {
+    padding: 0;
+  }
+  .map {
+    height: 500px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .heading-block .title {
     font-size: 20px;
@@ -1751,9 +1853,9 @@ a {
   color: #000;
   line-height: 1.5;
 }
-.blog-detail .heading-block .blog-detail-info {
+.blog-detail .blog-detail-info {
   padding: 15px 0;
-  margin-top: 15px;
+  margin-bottom: 30px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   display: flex;
@@ -1761,19 +1863,19 @@ a {
   align-items: center;
   gap: 20px;
 }
-.blog-detail .heading-block .blog-detail-info .date {
+.blog-detail .blog-detail-info .date {
   color: #979797;
 }
-.blog-detail .heading-block .blog-detail-info .dot {
+.blog-detail .blog-detail-info .dot {
   color: #979797;
 }
-.blog-detail .heading-block .blog-detail-info .share {
+.blog-detail .blog-detail-info .share {
   display: flex;
   justify-content: unset;
   align-items: center;
   gap: 15px;
 }
-.blog-detail .heading-block .blog-detail-info .share .share-item {
+.blog-detail .blog-detail-info .share .share-item {
   width: 20px;
 }
 .blog-detail .blog-detail-content {
@@ -1922,5 +2024,93 @@ a {
 @media only screen and (max-width: 480px) {
   .recruitment-list .recruitment-item .required {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+.recruitment-detail {
+  margin: 80px 0;
+}
+.recruitment-detail .heading-block .title {
+  color: #000;
+}
+.recruitment-detail .recruitment-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 40px;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 50px;
+}
+.recruitment-detail .recruitment-info-item .title {
+  color: #979797;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+.recruitment-detail .recruitment-info-item .text {
+  font-weight: 600;
+  color: #1c417e;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.recruitment-detail .recruitment-info-item .text.color {
+  color: #e4bf00;
+}
+.recruitment-detail .recruitment-detail-content * {
+  color: #000;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.recruitment-detail .recruitment-detail-content h4 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 30px 0;
+  position: relative;
+}
+.recruitment-detail .recruitment-detail-content h4::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background-color: #1c417e;
+}
+.recruitment-detail .recruitment-detail-content h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.recruitment-detail .recruitment-detail-content h6 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.recruitment-detail .recruitment-detail-content p {
+  margin-bottom: 10px;
+}
+.recruitment-detail .recruitment-detail-content ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+.recruitment-detail .recruitment-detail-content ul li {
+  margin-bottom: 10px;
+}
+.recruitment-detail .recruitment-detail-content img {
+  width: 100%;
+  margin: 20px 0;
+}
+.recruitment-detail .recruitment-detail-content a {
+  color: #1c417e;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 576px) {
+  .recruitment-detail {
+    margin: 50px 0;
+  }
+  .recruitment-detail .recruitment-info {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
