@@ -228,6 +228,7 @@ a {
 .breadcrumb {
   background-color: #f7f8fa;
   padding: 15px 0;
+  margin-bottom: 0;
   .breadcrumb-wrapper {
     @include flex(unset, center, 15px);
     overflow-x: auto;
@@ -292,6 +293,7 @@ a {
         color: red;
       }
     }
+    textarea,
     input {
       width: 100%;
       padding: 10px 15px;
@@ -302,6 +304,11 @@ a {
         border-color: $black;
       }
     }
+
+    textarea {
+      resize: none;
+    }
+
     select {
       width: 100%;
       padding: 10px 15px;

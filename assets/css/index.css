@@ -234,6 +234,7 @@ a {
 .breadcrumb {
   background-color: #f7f8fa;
   padding: 15px 0;
+  margin-bottom: 0;
 }
 .breadcrumb .breadcrumb-wrapper {
   display: flex;
@@ -297,6 +298,7 @@ a {
 .form .input label .required {
   color: red;
 }
+.form .input textarea,
 .form .input input {
   width: 100%;
   padding: 10px 15px;
@@ -304,8 +306,12 @@ a {
   border: 1px solid #ddd;
   transition: all ease 0.3s;
 }
+.form .input textarea:focus,
 .form .input input:focus {
   border-color: #000;
+}
+.form .input textarea {
+  resize: none;
 }
 .form .input select {
   width: 100%;
