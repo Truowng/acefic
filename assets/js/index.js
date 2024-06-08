@@ -104,6 +104,59 @@ if (document.querySelector(".blog-relate .swiper")) {
   });
 }
 
+if (document.querySelector(".about-history .about-history-slider .swiper")) {
+  const aboutHistory = new Swiper(
+    ".about-history .about-history-slider .swiper",
+    {
+      direction: "horizontal",
+      speed: 1000,
+      slidesPerView: 1,
+      spaceBetween: 40,
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+      },
+      navigation: {
+        prevEl: ".about-history-slider .slider-button.prev",
+        nextEl: ".about-history-slider .slider-button.next",
+      },
+    }
+  );
+}
+
+if (
+  document.querySelector(".about-executive .about-executive-slider .swiper")
+) {
+  const executiveSlider = new Swiper(
+    ".about-executive .about-executive-slider .swiper",
+    {
+      direction: "horizontal",
+      speed: 1000,
+      slidesPerView: 1,
+      loop: true,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 3000,
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+        1199: {
+          slidesPerView: 4,
+        },
+      },
+    }
+  );
+}
+
 if (document.querySelector("#fullpage")) {
   const fullPage = new fullpage("#fullpage", {
     responsiveWidth: 767,
