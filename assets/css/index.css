@@ -2929,6 +2929,18 @@ a {
   line-height: 1.5;
   margin-bottom: 40px;
 }
+.field-real-estate .real-estate-content .image {
+  overflow: hidden;
+}
+.field-real-estate .real-estate-content .image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all ease 0.3s;
+}
+.field-real-estate .real-estate-content .image:hover img {
+  transform: scale(1.1);
+}
 
 .field-invest {
   height: 100vh;
@@ -3042,9 +3054,77 @@ a {
 }
 .field-construction .construction-item .icon {
   min-width: 40px;
+  transition: all ease 0.3s;
 }
 .field-construction .construction-item .text {
   font-size: 16px;
   line-height: 1.5;
   color: #000;
+}
+.field-construction .construction-item:hover .icon {
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 991px) {
+  .field-equipment .background-image::before {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%);
+  }
+  .field-equipment .equipment-content {
+    width: 100%;
+  }
+  .field-equipment .equipment-content .heading-block {
+    width: 100%;
+  }
+  .field-equipment .equipment-content .heading-block .title {
+    width: 100%;
+    text-align: center;
+  }
+  .field-equipment .equipment-content .desc {
+    text-align: center;
+  }
+  .field-real-estate .decor-el {
+    display: none;
+  }
+  .field-real-estate .real-estate-content {
+    width: 100%;
+  }
+  .field-invest .background-image::before {
+    background: linear-gradient(90deg, rgba(28, 65, 126, 0.6) 0%, rgba(28, 65, 126, 0.6) 100%);
+  }
+  .field-invest .invest-image {
+    display: none;
+  }
+  .field-invest .invest-content {
+    width: 80%;
+  }
+  .field-invest .invest-content .desc {
+    text-align: center;
+  }
+  .field-invest .heading-block {
+    width: 100%;
+  }
+  .field-invest .heading-block .title {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .field-banner {
+    height: unset;
+    min-height: 400px;
+  }
+  .field-construction,
+  .field-equipment,
+  .field-real-estate,
+  .field-invest {
+    height: unset;
+    padding: 80px 0;
+  }
+  .field-construction .construction-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .field-construction .construction-item {
+    width: 100%;
+  }
 }
