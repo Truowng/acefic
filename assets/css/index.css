@@ -2808,3 +2808,243 @@ a {
     grid-row-gap: 20px;
   }
 }
+.field-banner {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: unset;
+}
+.field-banner .banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.field-banner .banner-image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.field-banner .banner-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.field-banner .banner-content {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.field-banner .breadcrumb {
+  background: transparent;
+  padding: 0;
+}
+.field-banner .breadcrumb .sep {
+  color: #fff;
+}
+.field-banner .breadcrumb .breadcrumb-link {
+  color: #fff;
+  font-size: 18px;
+}
+.field-banner .breadcrumb .breadcrumb-link.current {
+  font-weight: 600;
+}
+
+.field-equipment {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: unset;
+}
+.field-equipment .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.field-equipment .background-image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.field-equipment .background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%);
+}
+.field-equipment .equipment-content {
+  position: relative;
+  z-index: 2;
+  width: 40%;
+  color: #000;
+  margin-left: auto;
+}
+.field-equipment .equipment-content .desc {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.field-real-estate {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: unset;
+  overflow: hidden;
+}
+.field-real-estate .decor-el {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.field-real-estate .real-estate-content {
+  color: #000;
+  width: 45%;
+}
+.field-real-estate .real-estate-content .desc {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.field-invest {
+  height: 100vh;
+  position: relative;
+}
+.field-invest .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.field-invest .background-image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.field-invest .background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(28, 65, 126, 0) 0%, rgb(28, 65, 126) 100%);
+}
+.field-invest .invest-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  position: relative;
+  z-index: 2;
+}
+.field-invest .invest-image {
+  width: 500px;
+  align-self: flex-end;
+}
+.field-invest .invest-image img {
+  width: 100%;
+}
+.field-invest .invest-content {
+  width: 30%;
+}
+
+.field-construction {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: unset;
+}
+.field-construction .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.field-construction .background-image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
+}
+.field-construction .container {
+  position: relative;
+  z-index: 2;
+}
+.field-construction .heading-block .title {
+  color: #1c417e;
+}
+.field-construction .desc {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #000;
+}
+.field-construction .desc span {
+  color: #1c417e;
+  font-weight: 600;
+  font-size: 18px;
+}
+.field-construction .construction-content {
+  margin-top: 100px;
+}
+.field-construction .construction-content .title {
+  color: #1c417e;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.field-construction .construction-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+}
+.field-construction .construction-item {
+  display: flex;
+  justify-content: unset;
+  align-items: start;
+  gap: 20px;
+  width: 50%;
+}
+.field-construction .construction-item .icon {
+  min-width: 40px;
+}
+.field-construction .construction-item .text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}

@@ -1,0 +1,228 @@
+.field-banner {
+  height: 100vh;
+  position: relative;
+  @include flex(start, center, unset);
+  .banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: rgba($color: #000000, $alpha: 0.2);
+    }
+  }
+  .banner-content {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .breadcrumb {
+    background: transparent;
+    padding: 0;
+    .sep {
+      color: $white;
+    }
+    .breadcrumb-link {
+      color: $white;
+      font-size: 18px;
+      &.current {
+        font-weight: $fw-sb;
+      }
+    }
+  }
+}
+
+.field-equipment {
+  position: relative;
+  height: 100vh;
+  @include flex(unset, center, unset);
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgb(255, 255, 255) 50%
+      );
+    }
+  }
+  .equipment-content {
+    position: relative;
+    z-index: 2;
+    width: 40%;
+    color: $black;
+    margin-left: auto;
+    .desc {
+      font-size: 16px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.field-real-estate {
+  position: relative;
+  height: 100vh;
+  @include flex(unset, center, unset);
+  overflow: hidden;
+  .decor-el {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  .real-estate-content {
+    color: $black;
+    width: 45%;
+    .desc {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.field-invest {
+  height: 100vh;
+  position: relative;
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(28, 65, 126, 0) 0%,
+        rgb(28, 65, 126, 255) 100%
+      );
+    }
+  }
+  .invest-wrapper {
+    height: 100%;
+    @include flex(center, center, 80px);
+    position: relative;
+    z-index: 2;
+  }
+  .invest-image {
+    width: 500px;
+    align-self: flex-end;
+    img {
+      width: 100%;
+    }
+  }
+  .invest-content {
+    width: 30%;
+  }
+}
+
+.field-construction {
+  height: 100vh;
+  position: relative;
+  @include flex(center, center, unset);
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    img {
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  .heading-block {
+    .title {
+      color: $blue;
+    }
+  }
+  .desc {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: $black;
+    span {
+      color: $blue;
+      font-weight: $fw-sb;
+      font-size: 18px;
+    }
+  }
+
+  .construction-content {
+    margin-top: 100px;
+    .title {
+      color: $blue;
+      font-size: 24px;
+      font-weight: $fw-sb;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+  }
+
+  .construction-wrapper {
+    @include flex(space-between, start, 20px);
+  }
+
+  .construction-item {
+    @include flex(unset, start, 20px);
+    width: 50%;
+    .icon {
+      min-width: 40px;
+    }
+    .text {
+      font-size: 16px;
+      line-height: 1.5;
+      color: $black;
+    }
+  }
+}
