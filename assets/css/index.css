@@ -2146,6 +2146,7 @@ a {
   padding-top: 150px;
   position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 .about-intro .background-image {
   position: absolute;
