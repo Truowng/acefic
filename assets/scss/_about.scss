@@ -54,11 +54,11 @@
 
     .heading-block {
       .title {
-        color: $black;
+        color: $blue;
       }
     }
     .sub-title {
-      color: $blue;
+      color: $black;
       text-transform: uppercase;
       line-height: 1.5;
       font-size: 22px;
@@ -228,14 +228,14 @@
     .heading-block {
       .title {
         line-height: 1.5;
-        color: $black;
+        color: $blue;
       }
     }
     .about-commit-list {
       .about-commit-item {
         margin-bottom: 30px;
         .title {
-          color: $blue;
+          color: $black;
           padding-left: 10px;
           border-left: 2px solid $blue;
           font-size: 25px;
@@ -344,7 +344,7 @@
 
   .heading-block {
     .title {
-      color: $black;
+      color: $blue;
     }
   }
 

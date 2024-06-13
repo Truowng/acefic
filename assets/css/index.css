@@ -1259,7 +1259,6 @@ a {
   color: #000;
 }
 .project-list .project-content {
-  border-top: 1px solid #eee;
   padding-top: 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2263,10 +2262,10 @@ a {
   left: -50%;
 }
 .about-intro .about-intro-content .heading-block .title {
-  color: #000;
+  color: #1c417e;
 }
 .about-intro .about-intro-content .sub-title {
-  color: #1c417e;
+  color: #000;
   text-transform: uppercase;
   line-height: 1.5;
   font-size: 22px;
@@ -2428,13 +2427,13 @@ a {
 }
 .about-commit .about-commit-content .heading-block .title {
   line-height: 1.5;
-  color: #000;
+  color: #1c417e;
 }
 .about-commit .about-commit-content .about-commit-list .about-commit-item {
   margin-bottom: 30px;
 }
 .about-commit .about-commit-content .about-commit-list .about-commit-item .title {
-  color: #1c417e;
+  color: #000;
   padding-left: 10px;
   border-left: 2px solid #1c417e;
   font-size: 25px;
@@ -2530,7 +2529,7 @@ a {
   width: 50vw;
 }
 .about-executive .heading-block .title {
-  color: #000;
+  color: #1c417e;
 }
 .about-executive .about-executive-content {
   margin-top: -80px;
@@ -2958,6 +2957,9 @@ a {
   z-index: 1;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%);
 }
+.field-equipment .heading-block .title {
+  color: #1c417e;
+}
 .field-equipment .equipment-content {
   position: relative;
   z-index: 2;
@@ -2987,6 +2989,9 @@ a {
   top: 0;
   right: 0;
   z-index: -1;
+}
+.field-real-estate .heading-block .title {
+  color: #1c417e;
 }
 .field-real-estate .real-estate-content {
   color: #000;
