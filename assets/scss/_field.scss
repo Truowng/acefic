@@ -29,20 +29,6 @@
     position: relative;
     z-index: 1;
   }
-  .breadcrumb {
-    background: transparent;
-    padding: 0;
-    .sep {
-      color: $white;
-    }
-    .breadcrumb-link {
-      color: $white;
-      font-size: 18px;
-      &.current {
-        font-weight: $fw-sb;
-      }
-    }
-  }
 }
 
 .field-equipment {
@@ -200,7 +186,7 @@
   }
   .desc {
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     margin-bottom: 30px;
     color: $black;
@@ -212,14 +198,26 @@
   }
 
   .construction-content {
-    margin-top: 100px;
+    margin-top: 40px;
     .title {
       color: $blue;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: $fw-sb;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       text-align: center;
     }
+  }
+
+  .construction-container {
+    @include flex(space-between, center, 40px);
+  }
+
+  .construction-image {
+    width: 40%;
+  }
+
+  .construction-content-container {
+    width: 50%;
   }
 
   .construction-wrapper {
@@ -229,13 +227,14 @@
   .construction-item {
     @include flex(unset, start, 20px);
     width: 50%;
+    flex-direction: column;
     .icon {
       min-width: 40px;
       transition: all ease 0.3s;
     }
 
     .text {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1.5;
       color: $black;
     }
@@ -306,6 +305,15 @@
         width: 100%;
         text-align: center;
       }
+    }
+  }
+
+  .field-construction {
+    .construction-image {
+      display: none;
+    }
+    .construction-content-container {
+      width: 100%;
     }
   }
 }

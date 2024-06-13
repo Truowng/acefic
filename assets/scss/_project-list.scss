@@ -11,12 +11,16 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     margin-bottom: 20px;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
   }
   .project-tab-item {
     padding: 15px 10px;
     @include flex(center, center, unset);
     background-color: transparent;
     transition: all ease 0.3s;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
     &:hover {
       background-color: #f7f8fa;
     }
@@ -28,9 +32,9 @@
       transition: all ease 0.3s;
     }
     &.active {
-      background-color: $black;
+      background-color: #e6e6e6;
       a {
-        color: $white;
+        color: $black;
       }
     }
   }
