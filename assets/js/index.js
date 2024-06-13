@@ -167,7 +167,7 @@ if (counters) {
   counters.forEach((counter, index) => {
     const countUp = new CountUp(`num-${index + 1}`, counter.innerHTML, {
       enableScrollSpy: true,
-      duration: 3.0,
+      duration: 5.0,
       useGrouping: false,
       scrollSpyOnce: true,
     });
