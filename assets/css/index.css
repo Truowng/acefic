@@ -3091,7 +3091,7 @@ a {
   color: #1c417e;
 }
 .field-construction .desc {
-  text-align: center;
+  text-align: justify;
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 30px;
@@ -3110,7 +3110,7 @@ a {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: justify;
 }
 .field-construction .construction-container {
   display: flex;
@@ -3146,6 +3146,7 @@ a {
   font-size: 14px;
   line-height: 1.5;
   color: #000;
+  text-align: justify;
 }
 .field-construction .construction-item:hover .icon {
   transform: scale(1.2);
