@@ -520,6 +520,20 @@ a {
     color: $blue;
     width: fit-content;
   }
+
+  .contact-btn {
+    padding: 10px 20px;
+    background-color: $blue;
+    transition: all ease 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    border: 1px solid $blue;
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+  }
 }
 
 // RESPONSIVE

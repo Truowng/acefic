@@ -1,11 +1,27 @@
 .about-banner {
   height: 100vh;
+  position: relative;
+  padding-top: 200px;
+
   .banner-image {
     height: 100%;
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
     img {
       height: 100%;
       object-fit: cover;
+    }
+  }
+  .banner-content {
+    position: relative;
+    z-index: 2;
+  }
+  .heading-block {
+    .title {
+      color: $white;
     }
   }
 }
@@ -430,7 +446,7 @@
   }
 }
 
-.modal-dialog {
+#executive-modal {
   width: 55vw;
   max-width: unset;
 }
@@ -479,7 +495,7 @@
 .about-partner {
   height: 100vh;
   position: relative;
-  padding-top: 120px;
+  @include flex(unset, center, unset);
   .heading-block {
     .title {
       margin-bottom: 10px;
@@ -516,11 +532,10 @@
   .partner-content {
     position: relative;
     z-index: 1;
+    width: 100%;
   }
 
-  .partner-wrapper {
-    @include flex(center, center, 40px);
-    flex-wrap: wrap;
+  .partner-slider {
     margin-top: 80px;
   }
   .partner-item {
@@ -668,7 +683,7 @@
 
 @include landscape-phone {
   .about-banner {
-    height: unset;
+    height: 400px;
   }
 
   .about-intro,

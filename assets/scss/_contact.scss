@@ -1,0 +1,26 @@
+#contact-modal {
+  .modal-dialog {
+    width: 70vw;
+    max-width: unset;
+  }
+
+  .modal-body {
+    padding: 30px;
+  }
+  .contact {
+    background-color: unset;
+  }
+  .form {
+    .input-container {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@include extra-mobile {
+  #contact-modal {
+    .modal-dialog {
+      width: unset;
+    }
+  }
+}

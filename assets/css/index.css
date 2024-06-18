@@ -522,6 +522,19 @@ a {
   width: -moz-fit-content;
   width: fit-content;
 }
+#footer .contact-btn {
+  padding: 10px 20px;
+  background-color: #1c417e;
+  transition: all ease 0.3s;
+  display: inline-block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  border: 1px solid #1c417e;
+}
+#footer .contact-btn:hover {
+  background-color: #fff;
+  color: #1c417e;
+}
 
 @media only screen and (max-width: 991px) {
   .contact {
@@ -2211,15 +2224,28 @@ a {
 }
 .about-banner {
   height: 100vh;
+  position: relative;
+  padding-top: 200px;
 }
 .about-banner .banner-image {
   height: 100%;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 .about-banner .banner-image img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.about-banner .banner-content {
+  position: relative;
+  z-index: 2;
+}
+.about-banner .heading-block .title {
+  color: #fff;
 }
 
 .about-intro {
@@ -2610,7 +2636,7 @@ a {
   font-size: 24px;
 }
 
-.modal-dialog {
+#executive-modal {
   width: 55vw;
   max-width: unset;
 }
@@ -2659,7 +2685,10 @@ a {
 .about-partner {
   height: 100vh;
   position: relative;
-  padding-top: 120px;
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: unset;
 }
 .about-partner .heading-block .title {
   margin-bottom: 10px;
@@ -2696,13 +2725,9 @@ a {
 .about-partner .partner-content {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
-.about-partner .partner-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
+.about-partner .partner-slider {
   margin-top: 80px;
 }
 .about-partner .partner-item {
@@ -2844,7 +2869,7 @@ a {
 }
 @media only screen and (max-width: 767px) {
   .about-banner {
-    height: unset;
+    height: 400px;
   }
   .about-intro,
   .about-commit,
@@ -3219,5 +3244,24 @@ a {
   }
   .field-construction .construction-item {
     width: 100%;
+  }
+}
+#contact-modal .modal-dialog {
+  width: 70vw;
+  max-width: unset;
+}
+#contact-modal .modal-body {
+  padding: 30px;
+}
+#contact-modal .contact {
+  background-color: unset;
+}
+#contact-modal .form .input-container {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 576px) {
+  #contact-modal .modal-dialog {
+    width: unset;
   }
 }

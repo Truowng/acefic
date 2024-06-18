@@ -128,6 +128,27 @@ if (document.querySelector(".about-history .about-history-slider .swiper")) {
   );
 }
 
+if (document.querySelector(".about-partner .partner-slider .swiper")) {
+  const aboutParter = new Swiper(".about-partner .partner-slider .swiper", {
+    direction: "horizontal",
+    speed: 1000,
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 2,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+      767: {
+        slidesPerView: 3,
+      },
+      991: {
+        slidesPerView: 5,
+      },
+    },
+  });
+}
+
 if (
   document.querySelector(".about-executive .about-executive-slider .swiper")
 ) {
