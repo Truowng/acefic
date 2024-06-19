@@ -447,8 +447,10 @@
 }
 
 #executive-modal {
-  width: 55vw;
-  max-width: unset;
+  .modal-dialog {
+    width: 55vw;
+    max-width: unset;
+  }
 }
 
 .modal-content {
@@ -676,8 +678,10 @@
     }
   }
 
-  .modal-dialog {
-    width: unset;
+  #executive-modal {
+    .modal-dialog {
+      width: unset;
+    }
   }
 }
 

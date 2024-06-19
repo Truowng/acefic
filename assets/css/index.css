@@ -2636,7 +2636,7 @@ a {
   font-size: 24px;
 }
 
-#executive-modal {
+#executive-modal .modal-dialog {
   width: 55vw;
   max-width: unset;
 }
@@ -2863,7 +2863,7 @@ a {
   .about-member .member-wrapper {
     grid-column-gap: 30px;
   }
-  .modal-dialog {
+  #executive-modal .modal-dialog {
     width: unset;
   }
 }
@@ -3116,7 +3116,7 @@ a {
   color: #1c417e;
 }
 .field-construction .desc {
-  text-align: justify;
+  text-align: center;
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 30px;
@@ -3135,7 +3135,7 @@ a {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 30px;
-  text-align: justify;
+  text-align: center;
 }
 .field-construction .construction-container {
   display: flex;
@@ -3171,7 +3171,6 @@ a {
   font-size: 14px;
   line-height: 1.5;
   color: #000;
-  text-align: justify;
 }
 .field-construction .construction-item:hover .icon {
   transform: scale(1.2);
