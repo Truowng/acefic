@@ -2752,6 +2752,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: unset;
+  overflow: hidden;
 }
 .about-member .background-image {
   position: absolute;

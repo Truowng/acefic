@@ -557,6 +557,7 @@
   position: relative;
   height: 100vh;
   @include flex(center, center, unset);
+  overflow: hidden;
   .background-image {
     position: absolute;
     top: 0;
