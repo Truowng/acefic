@@ -2840,6 +2840,7 @@ a {
   align-items: unset;
   gap: 60px;
   flex-direction: column;
+  margin-left: -10%;
 }
 .about-member .member-pc .member-col .member-item .line {
   position: absolute;
@@ -2849,6 +2850,10 @@ a {
 }
 .about-member .member-pc .member-col .member-item:nth-child(3) .line {
   top: 0;
+}
+.about-member .member-pc .member-col.reverse {
+  margin-left: 0;
+  margin-right: -10%;
 }
 .about-member .member-pc .member-col.reverse .member-item .line {
   left: initial;
@@ -2878,10 +2883,10 @@ a {
   transition: all ease 0.3s;
 }
 .about-member .member-pc .member-item .name {
-  font-size: 12px;
+  font-size: 14px;
   color: #fff;
   text-align: center;
-  max-width: 150px;
+  max-width: 200px;
 }
 .about-member .member-pc .member-item .line {
   position: absolute;
@@ -2889,6 +2894,25 @@ a {
   height: 100%;
 }
 
+@media (max-width: 1600px) {
+  .about-member .member-pc .member-col {
+    margin-left: -5%;
+  }
+  .about-member .member-pc .member-col.reverse {
+    margin-right: -5%;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .about-member .member-pc {
+    display: none;
+  }
+  .about-member .member-mobile {
+    display: block;
+  }
+  .about-member .member-mobile .member-wrapper {
+    grid-column-gap: 30px;
+  }
+}
 @media only screen and (max-width: 991px) {
   .about-intro {
     padding-top: 0;
@@ -2923,15 +2947,6 @@ a {
   }
   .about-executive .about-executive-item.bigger .content {
     position: unset;
-  }
-  .about-member .member-pc {
-    display: none;
-  }
-  .about-member .member-mobile {
-    display: block;
-  }
-  .about-member .member-mobile .member-wrapper {
-    grid-column-gap: 30px;
   }
   #executive-modal .modal-dialog {
     width: unset;

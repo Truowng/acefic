@@ -634,6 +634,7 @@
     .member-col {
       @include flex(space-between, unset, 60px);
       flex-direction: column;
+      margin-left: -10%;
       .member-item {
         .line {
           position: absolute;
@@ -648,6 +649,8 @@
         }
       }
       &.reverse {
+        margin-left: 0;
+        margin-right: -10%;
         .member-item {
           .line {
             left: initial;
@@ -679,10 +682,10 @@
         transition: all ease 0.3s;
       }
       .name {
-        font-size: 12px;
+        font-size: 14px;
         color: $white;
         text-align: center;
-        max-width: 150px;
+        max-width: 200px;
       }
       .line {
         position: absolute;
@@ -694,6 +697,32 @@
 }
 
 // RESPONSIVE
+@media (max-width: 1600px) {
+  .about-member {
+    .member-pc {
+      .member-col {
+        margin-left: -5%;
+        &.reverse {
+          margin-right: -5%;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .about-member {
+    .member-pc {
+      display: none;
+    }
+    .member-mobile {
+      display: block;
+      .member-wrapper {
+        grid-column-gap: 30px;
+      }
+    }
+  }
+}
 @include tablet {
   .about-intro {
     padding-top: 0;
@@ -736,18 +765,6 @@
         .content {
           position: unset;
         }
-      }
-    }
-  }
-
-  .about-member {
-    .member-pc {
-      display: none;
-    }
-    .member-mobile {
-      display: block;
-      .member-wrapper {
-        grid-column-gap: 30px;
       }
     }
   }
