@@ -25,6 +25,30 @@ $blue: #1c417e;
   gap: $g;
 }
 
+@keyframes line-animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes displayNone {
+  to {
+    display: none;
+  }
+}
+
 $cubic: cubic-bezier(0.77, 0, 0.175, 1);
 
 // START BREAKPOINT VARIABLES
