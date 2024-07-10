@@ -204,13 +204,6 @@ if (counters) {
   });
 }
 
-// const logo = document.querySelectorAll(
-//   ".loading-wrapper .loading-line svg path"
-// );
-// logo.forEach((path, index) => {
-//   console.log(index, path.getTotalLength());
-// });
-
 lightbox.option({
   resizeDuration: 300,
   wrapAround: true,
